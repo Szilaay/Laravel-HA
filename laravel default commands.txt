@@ -1,0 +1,10 @@
+-- LARAVEL DEFAULT COMMS-
+
+Create new project - > composer create-project laravel/laravel [project-name]
+
+Make Model - > php artisan make:model [model-name]
+
+Make Controller - > php artisan make:controller [controller-name]
+
+Create new key - > php artisan key:generate
+

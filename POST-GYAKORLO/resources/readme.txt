@@ -54,7 +54,7 @@ Alakítsa ki az alábbi útvonalakat és hozzon hozzá létre egy-egy nézetet!
  	- A youtube link mezőnél ellenőrizd, hogy valid url legyen
 	- A többi mezőnél a value="" paraméter oldja meg a helyes adatbevitelt
 	  A perc lista értékei: 1-től 10 percig, percenként
-	  A másodperc lista értékei: 1-től 59 másodpercig, másodpercenként
+	  A másodperc lista értékei: 0-től 59 másodpercig, másodpercenként
  
  - AUTÓK
 	- Az autó rendszáma, márkája, típusa és színe mezők kötelezően megadandó mezők, ellenőrizz ürességet

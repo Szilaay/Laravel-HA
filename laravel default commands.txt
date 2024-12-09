@@ -1,5 +1,7 @@
 -- LARAVEL DEFAULT COMMS-
 
+Get composer - > composer update
+
 Create new project - > composer create-project laravel/laravel [project-name]
 
 Make Model - > php artisan make:model [model-name]

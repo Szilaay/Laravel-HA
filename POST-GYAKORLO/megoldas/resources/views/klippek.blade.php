@@ -20,7 +20,10 @@
                             {{-- Szám címe --}}
                             <div class="py-2">
                                 <label for="cim" class="form-label">Szám címe:</label>
-                                <input type="text" name="cim" id="nev" class="form-control" @error('cim') is-invalid @enderror" value="{{old('cim')}}">
+                                <input type="text" name="cim" id="nev" class="form-control @error('cim') is-invalid @enderror" value="{{old('cim')}}">
+                                @error('cim')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
                             {{-- Szám hossz --}}
                             <div class="py-2">
@@ -45,7 +48,10 @@
                             {{-- Youtube Link --}}
                             <div class="py-2">
                                 <label for="youtube" class="form-label">Youtube Link</label>
-                                <input type="text" name="youtube" id="youtube" class="form-control" @error('youtube') is-invalid @enderror value="{{ old('youtube') }}">
+                                <input type="text" name="youtube" id="youtube" class="form-control @error('youtube') is-invalid @enderror" value="{{ old('youtube') }}">
+                                @error('youtube')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
                             </div>
 
                             <div class="py-2 d-flex justify-content-center">

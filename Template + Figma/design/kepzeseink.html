@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/nav.css">
+        <link rel="stylesheet" href="public/css/tablazat.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+    
+        <link rel="icon" type="image/x-icon" href="public/img/navlogo.jpg">
+        <title>Okos Felnőtt | Képzéseink</title>
+    </head>
+    <body>
+        <button class="scroll-to-top" onclick="scrollToTop()">
+            <span class="arrow-up">&#8593;</span>
+        </button>
+
+        <div id="scroll-indicator"></div>
+        
+        <section id="navbar">
+            <header class="topnav">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#footer">Hírlevél</a></li>
+                        <li>Nyilvántartási szám: E-XXXXX/XXXX</li>
+                    </ul>
+                </nav>
+            </header>
+        
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-center" href="index.html">
+                    <img src="public/img/navlogo.jpg" alt="Brand Logo" class="nav-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="kepzeseink.html">Képzéseink</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="regisztracio.html">Regisztráció</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bejelentkezes.html">Bejelentkezés</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Több
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="dokumentumok.html">Dokumentumok</a>
+                                <a class="dropdown-item" href="index.html#helyszin">Helyszín</a>
+                                <a class="dropdown-item" href="index.html#kerdesek">Kérdésem van</a>
+                                <!-- <a class="dropdown-item" href="europass.html">EUROPASS</a> -->
+                                <!-- <a class="dropdown-item" href="cegeknek.html">Cégeknek</a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+        <section id="tablazat">
+            <div class="container p-5 fade-in">
+                <h1 class="text-center mb-4">Tanfolyamok ABC sorrendben</h1>
+                <div class="input-group mb-4">
+                    <input type="text" id="kereso" placeholder="Keresés a tanfolyamok között" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Tanfolyam</th>
+                            <th scope="col">Ár</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablazatBody">
+                        <tr class="clickable-row">
+                            <th scope="row">1</th>
+                            <td><a href="allatgondozo.html" class="text-primary">Állatgondozó tanfolyam</a></td>
+                            <td>119.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">2</th>
+                            <td><a href="#" class="text-primary">Állatorvosi asszisztens tanfolyam</a></td>
+                            <td>319.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">3</th>
+                            <td><a href="#" class="text-primary">Aranykalászos gazda tanfolyam</a></td>
+                            <td>149.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">4</th>
+                            <td><a href="#" class="text-primary">Asztalos segéd tanfolyam</a></td>
+                            <td>269.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">5</th>
+                            <td><a href="#" class="text-primary">Asztalosipari szerelő tanfolyam</a></td>
+                            <td>269.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">6</th>
+                            <td><a href="#" class="text-primary">Burkoló képzés</a></td>
+                            <td>545.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">7</th>
+                            <td><a href="#" class="text-primary">Csőhálózat-szerelő tanfolyam</a></td>
+                            <td>269.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">8</th>
+                            <td><a href="#" class="text-primary">Cukrász képzés</a></td>
+                            <td>450.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">9</th>
+                            <td><a href="#" class="text-primary">Cukrász szaktechnikus képzés</a></td>
+                            <td>450.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">10</th>
+                            <td><a href="#" class="text-primary">Dekoratőr képzés</a></td>
+                            <td>350.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">11</th>
+                            <td><a href="#" class="text-primary">Dísznövénykertész tanfolyam</a></td>
+                            <td>309.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">12</th>
+                            <td><a href="#" class="text-primary">Falazó kőműves tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">13</th>
+                            <td><a href="#" class="text-primary">Festő, mázoló, tapétázó képzés</a></td>
+                            <td>500.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">14</th>
+                            <td><a href="#" class="text-primary">Fotográfus (Kreatív fotográfus) képzés</a></td>
+                            <td>350.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">15</th>
+                            <td><a href="#" class="text-primary">Gépész technikus (CAD-CAM) képzés</a></td>
+                            <td>495.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">16</th>
+                            <td><a href="#" class="text-primary">Gépi és CNC forgácsoló képzés</a></td>
+                            <td>495.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">17</th>
+                            <td><a href="#" class="text-primary">Gépjármű mechatronikus (Szerviz) képzés</a></td>
+                            <td>595.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">18</th>
+                            <td><a href="#" class="text-primary">Gépjármű-mechatronikai technikus (Szerviz) képzés</a></td>
+                            <td>550.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">19</th>
+                            <td><a href="#" class="text-primary">Gipszkartonszerelő tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">20</th>
+                            <td><a href="#" class="text-primary">Grafikus képzés</a></td>
+                            <td>350.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">21</th>
+                            <td><a href="#" class="text-primary">Gumiabroncs-javító és kerékkiegyensúlyozó tanfolyam</a></td>
+                            <td>259.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">22</th>
+                            <td><a href="#" class="text-primary">Hő- és hangszigetelő tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">23</th>
+                            <td><a href="#" class="text-primary">Hűtő- és szellőzésrendszer- szerelő képzés</a></td>
+                            <td>500.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">24</th>
+                            <td><a href="#" class="text-primary">Hűtő-, klíma- és hőszivattyú berendezés-szerelő tanfolyam</a></td>
+                            <td>329.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">25</th>
+                            <td><a href="#" class="text-primary">Karosszérialakatos képzés</a></td>
+                            <td>590.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">26</th>
+                            <td><a href="#" class="text-primary">Kerékpárszerelő tanfolyam</a></td>
+                            <td>249.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">27</th>
+                            <td><a href="#" class="text-primary">Kéz- és lábápoló technikus (Kézápoló és körömkozmetikus) képzés</a></td>
+                            <td>350.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">28</th>
+                            <td><a href="#" class="text-primary">Kéz- és lábápoló technikus (Speciális lábápoló) képzés</a></td>
+                            <td>450.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">29</th>
+                            <td><a href="#" class="text-primary">Kézműves sajtkészítő tanfolyam</a></td>
+                            <td>254.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">30</th>
+                            <td><a href="#" class="text-primary">Kézműves sörgyártó tanfolyam</a></td>
+                            <td>150.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">31</th>
+                            <td><a href="#" class="text-primary">Kozmetikus technikus képzés</a></td>
+                            <td>495.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">32</th>
+                            <td><a href="#" class="text-primary">Kutyakozmetikus tanfolyam</a></td>
+                            <td>299.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">33</th>
+                            <td><a href="#" class="text-primary">Lakberendező tanfolyam</a></td>
+                            <td>294.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">34</th>
+                            <td><a href="#" class="text-primary">Logisztikai technikus (Logisztika és szállítmányozás) képzés</a></td>
+                            <td>345.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">35</th>
+                            <td><a href="#" class="text-primary">Nyílászáró és árnyékolástechnikai szerelő, beépítő tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">36</th>
+                            <td><a href="#" class="text-primary">Pálinkakészítő tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">37</th>
+                            <td><a href="#" class="text-primary">Pedagógiai munkatárs (Gyógypedagógiai asszisztens) tanfolyam</a></td>
+                            <td>139.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">38</th>
+                            <td><a href="#" class="text-primary">Pedagógiai munkatárs (Pedagógiai asszisztens) tanfolyam</a></td>
+                            <td>139.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">39</th>
+                            <td><a href="#" class="text-primary">Pénzügyi-számviteli ügyintéző képzés</a></td>
+                            <td>345.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">40</th>
+                            <td><a href="#" class="text-primary">PLC programozó tanfolyam</a></td>
+                            <td>329.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">41</th>
+                            <td><a href="#" class="text-primary">Regeneráló wellness szakember tanfolyam</a></td>
+                            <td>249.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">42</th>
+                            <td><a href="#" class="text-primary">Sörgyártó tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">43</th>
+                            <td><a href="#" class="text-primary">Süteménykészítő tanfolyam</a></td>
+                            <td>199.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">44</th>
+                            <td><a href="#" class="text-primary">Szakács képzés</a></td>
+                            <td>450.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">45</th>
+                            <td><a href="#" class="text-primary">Szakács szaktechnikus képzés</a></td>
+                            <td>450.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">46</th>
+                            <td><a href="#" class="text-primary">Szobafestő tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">47</th>
+                            <td><a href="#" class="text-primary">Turisztikai technikus (Idegenvezető) képzés</a></td>
+                            <td>450.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">48</th>
+                            <td><a href="#" class="text-primary">Üveges tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">49</th>
+                            <td><a href="#" class="text-primary">Villanyszerelő (Épületvillamosság) képzés</a></td>
+                            <td>590.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">50</th>
+                            <td><a href="#" class="text-primary">Virágkötő és virágkereskedő tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                        <tr class="clickable-row">
+                            <th scope="row">51</th>
+                            <td><a href="#" class="text-primary">Zsaluzó, állványozó tanfolyam</a></td>
+                            <td>239.000 Ft-tól</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="footer">
+            <footer class="text-center custom-footer">
+                <div class="container p-4">
+                    <div class="mb-4">
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <form action="/hirlevel.blade.php" method="get">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-auto">
+                                    <p class="pt-2">
+                                        <strong>Iratkozzon fel a hírlevelünkre!</strong>
+                                    </p>
+                                </div>
+                                <div class="col-md-5 col-12">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" id="form5Example24" class="form-control" required pattern=".*\..*" >
+                                        <label class="form-label" for="form5Example24">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button data-mdb-ripple-init type="submit" class="btn btn1 btn-outline mb-4">
+                                        Feliratkozás
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Telefonszámok</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Ügyfélszolgálat:
+                                        <a class="text-body" href="tel:11111111111">
+                                            +11111111111
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Vizsgaosztály:
+                                        <a class="text-body" href="tel:22222222222">
+                                            +22222222222
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Titkárság:
+                                        <a class="text-body" href="tel:33333333333">
+                                            +33333333333
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Pénzügy:
+                                        <a class="text-body" href="tel:+44444444444">
+                                            +44444444444
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Emailek</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Ügyfélszolgálat:
+                                        <a class="text-body" href="mailto:ugyfelszolgalat@okosfelnott.com">
+                                            ugyfelszolgalat@okosfelnott.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Vizsgaosztály:
+                                        <a class="text-body" href="mailto:vizsgaosztaly@okosfelnott.com">
+                                            vizsgaosztaly@okosfelnott.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Titkárság:
+                                        <a class="text-body" href="mailto:titkarsag@okosfelnott.com">
+                                            titkarsag@okosfelnott.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Pénzügy:
+                                        <a class="text-body" href="mailto:penzugy@okosfelnott.com">
+                                            penzugy@okosfelnott.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold">Nyitvatartás</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Hétköznap: 10:00 - 18:00
+                                    </li>
+                                    <li>
+                                        Szombat: 12:00 - 18:00
+                                    </li>
+                                    <li>
+                                        Vasárnap: ZÁRVA!
+                                    </li>
+                                    <li>
+                                        Ünnepnap: ZÁRVA!
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Dokumentumok</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a class="text-body" href="aszf.html">Általános Szerződési Feltételek</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-body" href="adatkezelesi.html">Adatkezelési Tájékoztató</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-body" href="sutitajekoztato.html">Cookie-kezelési tájékoztató</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-body" href="sutibeallitasok.html">Cookie beállítások</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center p-3 custom-background">
+                    © XXXX Copyright: <a class="text-reset fw-bold" href="index.html">Template</a>
+                </div>
+            </footer>
+        </section>
+
+        <script src="public/js/script.js"></script>       
+        <script src="public/js/tablazat.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

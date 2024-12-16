@@ -1,0 +1,14 @@
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+thead{
+    color: var(--color-black);
+    background-color: var(--color-yellow);
+}
+
+.table{
+    font-size: 150%;
+}

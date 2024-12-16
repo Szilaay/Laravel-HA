@@ -1,0 +1,32 @@
+@import url("variables.css");
+
+.card-header{
+    background-color: var(--color-yellow);
+}
+
+.btn-link {
+    text-align: left;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.custom-btn {
+    color: var(--color-black);
+}
+
+.custom-btn:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card-body {
+    background-color: var(--color-white);
+    font-size: 1.2rem; 
+}
+
+#kerdesek{
+    background-color: var(--color-white) !important;
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/nav.css">
+        <link rel="stylesheet" href="public/css/kartyak.css">
+        <link rel="stylesheet" href="public/css/kerdesek.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+    
+        <link rel="icon" type="image/x-icon" href="public/img/navlogo.jpg">
+        <title>Okos Felnőtt | Home</title>
+    </head>
+    <body>
+        <button class="scroll-to-top" onclick="scrollToTop()">
+            <span class="arrow-up">&#8593;</span>
+        </button>
+
+        <div id="scroll-indicator"></div>
+        
+        <section id="navbar">
+            <header class="topnav">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#footer">Hírlevél</a></li>
+                        <li>Nyilvántartási szám: E-XXXXX/XXXX</li>
+                    </ul>
+                </nav>
+            </header>
+        
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-center" href="index.html">
+                    <img src="public/img/navlogo.jpg" alt="Brand Logo" class="nav-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="kepzeseink.html">Képzéseink</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria.html">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="regisztracio.html">Regisztráció</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bejelentkezes.html">Bejelentkezés</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Több
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="dokumentumok.html">Dokumentumok</a>
+                                <a class="dropdown-item" href="#helyszin">Helyszín</a>
+                                <a class="dropdown-item" href="#kerdesek">Kérdésem van</a>
+                                <!-- <a class="dropdown-item" href="europass.html">EUROPASS</a> -->
+                                <!-- <a class="dropdown-item" href="cegeknek.html">Cégeknek</a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        
+            <div class="video-container">
+                <video src="public/vid/1.mp4" autoplay loop muted playsinline></video>
+                <div class="gradient-overlay"></div>
+                <section class="py-5" id="asd">
+                    <div class="container">
+                        <div class="row justify-content-center text-center py-4">
+                            <div class="col-lg-9">
+                                <h2 class="display-4 fw-bold my-2">Remek alkalom a tanulásra, kezdje el minnél hamarabb!</h2>
+                                <p class="herotext">Ismerje meg a legújabb iparági trendeket és fejlessze szakmai készségeit!</p>
+                                <div class="mx-auto py-2">
+                                    <a class="btn btn1 btn-lg" href="kepzeseink.html">Elérhető képzéseink</a>
+                                    <a class="btn btn2 btn-lg" href="#kerdesek">Kérdése van?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="kartyak">
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-6">
+                            <a href="galeria.html">
+                                <img alt="" class="img-fluid border-left gallery-img" src="public/img/1.jpg">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-lg-12 col-xxl-10 col-xl-12">
+                                    <div class="p-md-3 p-xl-5 mt-4 mt-md-0">
+                                        <h2 class="fw-semibold my-1">Fedezze fel a fejlődés útját velünk!</h2>
+                                        <div class="text-muted">2021.01.01</div>
+                                        <p class="my-4 picture-text">
+                                            Szeretne új szakmai ismereteket szerezni, fejleszteni a képességeit, vagy új karrierbe kezdeni? Mi segítünk elérni céljait! Felnőttképzési programjaink széles választékát kínáljuk, hogy Ön 
+                                            megtalálja az igényeinek és ambícióinak leginkább megfelelő képzést. Modern tantervekkel, tapasztalt oktatókkal és rugalmas időbeosztással támogatjuk a tanulását.
+                                        </p>
+                                        <a class="btn btn1 btn-primary" href="kepzeseink.html">Képzéseink</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-6 order-2 order-md-1">
+                            <div class="row justify-content-end">
+                                <div class="col-lg-12 col-xxl-10 col-xl-12">
+                                    <div class="p-md-3 p-xl-5 mt-4 mt-md-0">
+                                        <h2 class="fw-semibold my-1">Új év, új lehetőségek!</h2>
+                                        <div class="text-muted">2021.01.01</div>
+                                        <p class="my-4 picture-text">
+                                            Nálunk most könnyedén elkezdheti a tanulást! Jelentkezzen még ma kedvezményes áron induló felnőttképzéseinkre! Válasszon piacképes szakmák közül, és készüljön fel az új kihívásokra. Online és 
+                                            személyes oktatási lehetőségek egyaránt elérhetőek. Ne maradjon le - a jövője most kezdődik!
+                                        </p>
+                                        <a class="btn btn1 btn-primary" href="regisztacio.html">Regisztráció</a>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-1 order-md-2">
+                            <a href="galeria.html">
+                                <div class="mt-5 mt-md-0">
+                                    <img alt="" class="img-fluid border-right gallery-img" src="public/img/2.jpg">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-6">
+                            <a href="galeria.html">
+                                <img alt="" class="img-fluid border-left gallery-img" src="public/img/3.jpg">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-lg-12 col-xxl-10 col-xl-12">
+                                    <div class="p-md-3 p-xl-5 mt-4 mt-md-0">
+                                        <h2 class="fw-semibold my-1">Tanulni sosem késő!</h2>
+                                        <div class="text-muted">2021.01.01</div>
+                                        <p class="my-4 picture-text">
+                                            Cégünk több mint 10 éve támogatja a felnőttek szakmai fejlődését. Legyen szó pályamódosításról, új készségek elsajátításáról, vagy személyes fejlődésről, nálunk mindenki megtalálhatja a számára 
+                                            megfelelő képzést. Kövesse oldalunkat a legfrissebb hírekért, tippekért és inspiráló történetekért!
+                                        </p>
+                                        <a class="btn btn1 btn-primary" href="galeria.html">Galéria</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row g-0 align-items-center" id="helyszin">
+                        <div class="col-md-6 order-2 order-md-1">
+                            <div class="row justify-content-end">
+                                <div class="col-lg-12 col-xxl-10 col-xl-12">
+                                    <div class="p-md-3 p-xl-5 mt-4 mt-md-0">
+                                        <h2 class="fw-semibold my-1">Itt talál meg bennünket!</h2>
+                                        <div class="text-muted">2021.01.01</div>
+                                        <p class="my-4 picture-text">
+                                            Iskolánk könnyen megközelíthető villamossal, metróval vagy akár volánbusszal is. Ügyelünk arra, hogy mindenki számára egyszerű legyen az eljutás. Emellett parkolóhelyek is rendelkezésre állnak a tanulók és tanárok számára, így kényelmesen érkezhet autóval is. Ne habozzon, látogasson el hozzánk!
+                                        </p>
+                                        <a class="btn btn1 btn-primary" href="https://maps.app.goo.gl/Mt31ff9VLyKgHcso6" target="_blank">Kinagyítás</a>
+                                    </div>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-1 order-md-2">
+                            <div class="mt-5 mt-md-0">
+                                <iframe class="border-right"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2693.9680209697394!2d19.074131775067215!3d47.52948559330133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741db939c5746e7%3A0xf93af4f99f4b38a8!2sBMSZC%20Vereb%C3%A9ly%20L%C3%A1szl%C3%B3%20Technikum!5e0!3m2!1shu!2shu!4v1733773554779!5m2!1shu!2shu"
+                                    allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+        <section id="kerdesek">
+            <div class="container py-5">
+                <div class="text-center mb-4">
+                    <h2 class="gyik-title">Gyakran Ismételt Kérdések (GYIK)</h2>
+                    <p class="lead">Tudj meg többet a felnőttképzésünkről és tanfolyamainkról!</p>
+                </div>
+                <div id="accordion">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link custom-btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-question-circle"></i> Mi az a felnőttképzés?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                A felnőttképzés olyan oktatási forma, amely felnőttek számára kínál tanulási lehetőségeket, hogy új ismereteket, készségeket szerezhessenek, vagy meglévő tudásukat bővíthessék. Ide tartozik a formális és informális tanulás is, amely lehetővé teszi, hogy a résztvevők saját igényeiknek és életkörülményeiknek megfelelően fejlődjenek. A felnőttképzés célja nem csupán a munkaerőpiacra való felkészítés, hanem személyes fejlődés és életminőség javítása is.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link custom-btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fas fa-book-open"></i> Milyen tanfolyamokat kínáltok?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Számos különböző tanfolyamot kínálunk, beleértve a nyelvtanfolyamokat, számítástechnikai képzéseket, és személyes fejlődésre irányuló kurzusokat. Emellett rendelkezünk szakmai továbbképzésekkel, mint például projektmenedzsment, pénzügyi alapismeretek, valamint a soft-skills fejlesztése érdekében szervezett tréningekkel is. Célunk, hogy mindenki megtalálja a számára legmegfelelőbb képzési formát.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link custom-btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fas fa-clock"></i> Hány órásak a tanfolyamok?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                A tanfolyamok hossza változó, általában 20-150 óra közötti időtartamot ölel fel, a választott tanfolyamtól függően. Van lehetőség intenzív kurzusok választására is, amelyek rövidebb idő alatt, de nagyobb óraszámmal kínálnak mélyebb tudást ugyanabban a témában. Ez lehetővé teszi a gyorsabb fejlődést és a tudás azonnali alkalmazását.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link custom-btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fas fa-user-graduate"></i> Hogyan történik a jelentkezés a tanfolyamokra?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                A tanfolyamokra online jelentkezési űrlap kitöltésével lehet jelentkezni, amely a weboldalunkon elérhető. A jelentkezési folyamat egyszerű és gyors, a szükséges információk megadásával könnyedén rögzíthető a részvételi szándék. Ezen kívül telefonon vagy e-mailben is érdeklődhetsz a tanfolyamokról, valamint személyesen is felkereshetsz minket.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link custom-btn collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="fas fa-wallet"></i> Milyen költségekkel járnak a tanfolyamok?
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                A tanfolyamok költségei változóak, attól függően, hogy milyen típusú képzést választasz. Részletes árlistát találhatsz a weboldalunkon, ahol tájékozódhatsz az egyes tanfolyamok díjáról. Emellett különböző kedvezmények és támogatások érhetők el, amelyek segíthetnek csökkenteni a költségeket. Ne hagyd ki a lehetőséget, hogy a számodra legjobban megfelelő részvételi lehetőségeket válaszd ki!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <footer class="text-center custom-footer">
+                <div class="container p-4">
+                    <div class="mb-4">
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 social-icon" href="#!" role="button">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <form action="/" method="get">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-auto">
+                                    <p class="pt-2">
+                                        <strong>Iratkozzon fel a hírlevelünkre!</strong>
+                                    </p>
+                                </div>
+                                <div class="col-md-5 col-12">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input type="email" id="form5Example24" class="form-control" required pattern=".*\..*" >
+                                        <label class="form-label" for="form5Example24">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button data-mdb-ripple-init type="submit" class="btn btn1 btn-outline mb-4">
+                                        Feliratkozás
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Telefonszámok</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Ügyfélszolgálat:
+                                        <a class="text-body" href="tel:11111111111">
+                                            +11111111111
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Vizsgaosztály:
+                                        <a class="text-body" href="tel:22222222222">
+                                            +22222222222
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Titkárság:
+                                        <a class="text-body" href="tel:33333333333">
+                                            +33333333333
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Pénzügy:
+                                        <a class="text-body" href="tel:+44444444444">
+                                            +44444444444
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Emailek</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Ügyfélszolgálat:
+                                        <a class="text-body" href="mailto:ugyfelszolgalat@okosfelnott.com">
+                                            ugyfelszolgalat@okosfelnott.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Vizsgaosztály:
+                                        <a class="text-body" href="mailto:vizsgaosztaly@okosfelnott.com">
+                                            vizsgaosztaly@okosfelnott.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Titkárság:
+                                        <a class="text-body" href="mailto:titkarsag@okosfelnott.com">
+                                            titkarsag@okosfelnott.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Pénzügy:
+                                        <a class="text-body" href="mailto:penzugy@okosfelnott.com">
+                                            penzugy@okosfelnott.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase font-weight-bold">Nyitvatartás</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        Hétköznap: 10:00 - 18:00
+                                    </li>
+                                    <li>
+                                        Szombat: 12:00 - 18:00
+                                    </li>
+                                    <li>
+                                        Vasárnap: ZÁRVA!
+                                    </li>
+                                    <li>
+                                        Ünnepnap: ZÁRVA!
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                                <h5 class="text-uppercase">Dokumentumok</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a class="text-body" href="aszf.html">Általános Szerződési Feltételek</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-body" href="adatkezelesi.html">Adatkezelési Tájékoztató</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-body" href="sutitajekoztato.html">Cookie-kezelési tájékoztató</a>
+                                    </li>
+                                    <li>
+                                        <a class="text-body" href="sutibeallitasok.html">Cookie beállítások</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center p-3 custom-background">
+                    © XXXX Copyright: <a class="text-reset fw-bold" href="index.html">Template</a>
+                </div>
+            </footer>
+        </section>
+
+        <script src="public/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+:root {
+    --color-first: blue;
+    --color-black: black;
+    --color-white: white;
+    --color-grey: grey;
+    --color-red: red;
+    --color-blue: blue;
+    --color-green: green;
+    --color-yellow: rgb(239, 239, 67);
+    --color-cyan: cyan;
+    --color-magenta: magenta;
+    --color-orange: orange;
+    --color-purple: purple;
+    --color-brown: brown;
+    --color-pink: pink;
+    --color-teal: teal;
+    --color-lime: lime;
+}

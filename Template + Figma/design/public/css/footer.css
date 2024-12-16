@@ -1,0 +1,37 @@
+@import url("variables.css");
+
+.social-icon {
+    font-size: 20px;
+    color: var(--color-black);
+    border: none;
+    transition: transform 0.5s ease, color 1s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.5);
+    color: var(--color-blue);
+}
+
+ul.list-unstyled li {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+ul.list-unstyled li a {
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+.custom-background {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer h5{
+    padding: 20px;
+}
+
+.text-body {
+    display: block; 
+    margin-top: 1px; 
+}

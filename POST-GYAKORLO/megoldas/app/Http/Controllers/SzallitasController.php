@@ -17,7 +17,7 @@ class SzallitasController extends Controller
         $req -> validate([
             'nev' => 'required',
             'irszam' => 'required|numeric|min:1000|max:9999',
-            'varos' => 'required',
+            'varos' => 'required|alpha',
             'utca' => 'required',
             'hazszam'=> 'required',
             'telszam' => 'required|numeric|digits:7'
@@ -30,7 +30,7 @@ class SzallitasController extends Controller
             'varos.required' => 'Adjon meg egy várost',
             'utca.required' => 'Adjon meg egy utcát',
             'hazszam.required' => 'Adja meg a házszámot',
-            'telszam.required' => 'Adjon meg egy telefonszámot',
+            'telszam.required' => 'Telefonszámot kötelező megadni',
             'telszam.numeric' => 'A telszám csak szám lehet',
             'telszam.digits' => 'Maximum 7 karakter lehet.'
         ]);
@@ -42,9 +42,9 @@ class SzallitasController extends Controller
         $data -> varos          = $req -> varos;
         $data -> utca           = $req -> utca;
         $data -> hazszam        = $req -> hazszam;
-        $data -> emelet         = $req -> emelet;
-        $data -> ajto           = $req -> ajto;
-        $data -> tel            = "+".$req -> telszamkorzet.$req -> telszam;
+        $data ->emelet          = $req -> emelet == '' ? '' : $req->emelet;
+        $data ->ajto            = $req -> ajto == '' ? '' : $req->ajto;
+        $data -> tel            = "+36".$req -> telszamkorzet.$req -> telszam;
         $data -> erintesmentes  = $req -> has('erintesmentes') ? 'i' : 'n';
 
         $data -> Save();

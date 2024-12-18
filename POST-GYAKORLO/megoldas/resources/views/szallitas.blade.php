@@ -11,54 +11,39 @@
                             @csrf
                             {{-- Név --}}
                             <div class="py-2">
-                                <label for="nev" class="form-label">Név: </label> <label class="text-danger">*</label>
+                                <label for="nev" class="form-label">Név: <span class="text-danger">*</span></label>
                                 <input type="text" name="nev" id="nev" class="form-control @error('nev') is-invalid @enderror" value="{{old('nev')}}">
-                                @error('nev')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
                             </div>
                             {{-- Irányítószám | Város --}}
                             <div class="py-2">
                                 <div class="row">
-                                    <div class="col col-lg-3">
-                                        <label for="irszam" class="form-label">Irányítószám: </label> <label class="text-danger">*</label>
+                                    <div class="pb-2 col-md-3" >
+                                        <label for="irszam" class="form-label">Irányítószám: <span class="text-danger">*</span></label>
                                         <input type="text" name="irszam" id="irszam" class="form-control @error('irszam') is-invalid @enderror" value="{{old('irszam')}}">
-                                        @error('irszam')
-                                            <p class="text-danger">{{ $message }}</p>
-                                        @enderror
                                     </div>
                                     <div class="col">
-                                        <label for="varos" class="form-label">Város: </label> <label class="text-danger">*</label>
+                                        <label for="varos" class="form-label">Város: <span class="text-danger">*</span></label>
                                         <input type="text" name="varos" id="varos" class="form-control @error('varos') is-invalid @enderror" value="{{old('varos')}}">
-                                        @error('varos')
-                                            <p class="text-danger">{{ $message }}</p>
-                                        @enderror
                                     </div>
                                 </div>
                             </div>
                             {{-- Utca | Házszám --}}
                             <div class="py-2">
                                 <div class="row">
-                                    <div class="col col-lg-9">
-                                        <label for="utca" class="form-label">Utca: </label> <label class="text-danger">*</label>
+                                    <div class="pb-2 col-md-9">
+                                        <label for="utca" class="form-label">Utca: <span class="text-danger">*</span></label>
                                         <input type="text" name="utca" id="utca" class="form-control @error('utca') is-invalid @enderror" value="{{old('utca')}}">
-                                        @error('utca')
-                                            <p class="text-danger">{{ $message }}</p>
-                                        @enderror
                                     </div>
                                     <div class="col">
-                                        <label for="hazszam" class="form-label">Házszám: </label> <label class="text-danger">*</label>
+                                        <label for="hazszam" class="form-label">Házszám: <span class="text-danger">*</span></label>
                                         <input type="text" name="hazszam" id="hazszam" class="form-control @error('hazszam') is-invalid @enderror" value="{{old('hazszam')}}">
-                                        @error('hazszam')
-                                            <p class="text-danger">{{ $message }}</p>
-                                        @enderror
                                     </div>
                                 </div>
                             </div>
                             {{-- Emelet | Ajtó ((OPCIONÁLIS)) --}}
                             <div class="py-2">
                                 <div class="row">
-                                    <div class="col col-lg-6">
+                                    <div class="pb-2 col-md-6">
                                         {{-- <label for="emelet" class="form-label">Emelet: </label>
                                         <input type="text" name="emelet" id="emelet" class="form-control" value="{{old('emelet')}}">
                                         @error('emelet')
@@ -68,9 +53,9 @@
                                         <label for="emelet" class="form-label">Emelet: </label>
                                         <select name="emelet" id="emelet" class="form-select">
                                             <option value="">---</option>
-                                            <option value="fsz">fsz</option>
+                                            <option value="fsz" @if(old('emelet') == 'fsz') selected @endif>fsz</option>
                                             @for($i = 1; $i < 31; $i++)
-                                                <option value="{{ $i }}"> {{ $i }}. emelet</option>
+                                                <option value="{{ $i }}" @if(old('emelet') == $i) selected @endif> {{ $i }}. emelet</option>
                                             @endfor
                                         </select>
                                     </div>
@@ -82,8 +67,8 @@
                             </div>
                             <div class="py-2">
                                 <div class="row">
-                                    <div class="col col-lg-3">
-                                        <label for="telszamkorzet" class="form-label">Telefonszám: </label> <label class="text-danger">*</label>
+                                    <p class="form-label">Telefonszám: <span class="text-danger">*</span></p>
+                                    <div class="pb-3 col-md-3">  
                                         <select name="telszamkorzet" id="telszamkorzet" class="form-select">
                                             <option value="20" @if(old('telszamkorzet') == 20) selected @endif>20</option>
                                             <option value="30" @if(old('telszamkorzet') == 30) selected @endif>30</option>
@@ -91,17 +76,16 @@
                                         </select>
                                     </div>
                                     <div class="col">
-                                        <label for="telszam" class="form-label">‎ </label>
                                         <input type="text" name="telszam" id="telszam" class="form-control @error('telszam') is-invalid @enderror" placeholder="Pl.: 1234567" value="{{old('telszam')}}">
-                                        @error('telszam')
-                                            <p class="text-danger">{{ $message }}</p>
-                                        @enderror
                                     </div>
+                                    @error('telszam')
+                                    <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                             </div>
 
                             <div class="py-2">
-                                <input type="checkbox" class="form-check-input" name="erintesmentes" id="erintesmentes">
+                                <input type="checkbox" class="form-check-input" name="erintesmentes" id="erintesmentes" @if(old('erintesmentes') == 'i') checked @endif value="i"   >
                                 <label for="erintesmentes" class="form-label">Érintésmentes szállítást kérek </label>
                             </div>
                             <label class="text-danger">* kötelező mező</label>
@@ -123,11 +107,11 @@
                         </tr>
                         @foreach ($result as $row)
                             <tr>
-                                <td>{{ $row -> nev }}</td>
-                                <td>{{ $row -> irsz }}, {{ $row -> varos }}, {{ $row -> utca }} {{ $row -> hazszam }} {{ $row -> emelet }} {{ $row -> ajto }}</td>
-                                <td>{{ $row -> tel }}</td>
+                                <td>{{ $row->nev }}</td>
+                                <td>{{ $row->irsz }}, {{ $row->varos }}, {{ $row->utca }} {{ $row->hazszam }} @if(!empty($row->emelet)) - {{$row->emelet == 'fsz' ? $row->emelet : $row->emelet . '. emelet'}} {{$row->ajto}} @endif</td>
+                                <td>{{ $row->tel }}</td>
                                 <td>
-                                    @if($row -> erintesmentes == 'i')
+                                    @if($row->erintesmentes == 'i')
                                         igen
                                     @else
                                         nem

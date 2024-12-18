@@ -15,13 +15,13 @@ class AutokController extends Controller
 
     public function AutokData(Request $req){
         $req -> validate([
-            'rendszam' => 'required|min:6|max:9',
+            'rendszam' => 'required|min:7|max:9',
             'marka' => 'required',
             'tipus' => 'required',
             'szin' => 'required'
         ],[
             'rendszam.required' => "Adja meg a rendszámot",
-            'rendszam.min' => "Minimum 6 karakterből kell állnia.",
+            'rendszam.min' => "Minimum 7 karakterből kell állnia.",
             "rendszam.max" => "Maximum 9 karakterből állhat.",
             "marka.required" => "Adja meg a márkát",
             "tipus.required" => "Adja meg a tipust.",

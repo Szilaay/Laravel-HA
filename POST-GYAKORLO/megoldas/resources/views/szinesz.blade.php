@@ -57,7 +57,7 @@
                         @foreach ($result as $row)
                             <tr>
                                 <td>{{ $row -> nev }}</td>
-                                <td>{{ $row -> szuletes }}</td>
+                                <td>{{ date('Y. m. d.', strtotime($row->szuletes)) }}</td>
                                 <td>{{ $row -> nemzet }}</td>
                                 <td>
                                     @if($row -> oscar_dij == 'i')

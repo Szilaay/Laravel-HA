@@ -1,0 +1,48 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzakController;
+use App\Http\Controllers\UserController;
+
+Route::get('/', [PizzakController::class, 'Akcios']);
+//Tipusútvonal adatlaphoz - ID elkapás //
+Route::get('/adatlap/{id}', [PizzakController::class, 'Adatlap']);
+
+Route::get('/all', [PizzakController::class, 'All']);
+Route::get('/all/{p}', [PizzakController::class, 'AllOrder']);
+
+Route::get('/rnd', [PizzakController::class, 'Rnd']);
+
+Route::get('/add', [PizzakController::class, 'Add'])  ;                                 //Ez a megjelenítéshez kell
+Route::post('/add', [PizzakController::class, 'AddData']);      //Gomb kezeléséhez kell
+
+Route::get('/mod', [PizzakController::class, 'Mod']);
+
+Route::get('/modositas/{id}', [PizzakController::class, 'Modositas']);
+Route::post('/modositas/{id}', [PizzakController::class, 'ModositasData']);
+
+Route::get('/torles/{id}', [PizzakController::class, 'Torles']);
+
+Route::get('/exit/{id}', [PizzakController::class, 'Exit']);
+
+####################################################################
+
+Route::view('/reg', 'reg');
+Route::post('/reg', [UserController::class, 'Reg']);
+Route::view('/login', 'login');
+Route::post('/login', [UserController::class, 'Login']);
+
+Route::get('/profil', [UserController::class, 'Profil']);
+
+Route::get('/logout', [UserController::class, 'Logout']);
+
+Route::get('/newpass', [UserController::class, 'NewPass']);
+Route::post('/newpass', [UserController::class, 'NewPassData']);
+
+//account deactivation
+
+Route::get('/deactivation', [UserController::class, 'Deactivate']);
+Route::post('/deactivation', [UserController::class, 'DeactivateData']);
+
+
+

@@ -13,4 +13,8 @@ class GuestbookController extends Controller
 
         return view('guestbook', ['guestbook' => $guestbook]);
     }
+
+    public function addGuestbook(){
+        
+    }
 }

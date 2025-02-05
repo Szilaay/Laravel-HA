@@ -19,30 +19,38 @@
     <header>
         <h1>Üdvözöljük településünk honlapján!</h1>
     </header>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark px-2">  
+    <nav class="px-2 navbar navbar-expand-sm bg-dark navbar-dark">  
         <div class="container bg-dark">
-            <a class="navbar-brand" href="\">Pusztaszentmária</a>  
+            <a class="navbar-brand" href="/">Pusztaszentmária</a>  
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="\news">Hírek</a>
+                    <a class="nav-link" href="/news">Hírek</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="\guestbook">Vendégkönyv</a>
+                    <a class="nav-link" href="/guestbook">Vendégkönyv</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled">||</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Bejelentkezés</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Regisztráció</a>
-                </li>
-
+                @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profil">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Kijelentkezés</a>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Bejelentkezés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Regisztráció</a>
+                    </li>
+                @endauth
                 </ul>            
             </div>
         </div>
@@ -50,7 +58,7 @@
     <main class="container pb-2">
         <div class="row">
             @yield('content')
-            <div class="col-md-3 pt-4">
+            <div class="pt-4 col-md-3">
                 <h5>Boldog névnapot!</h5>
                 <p id="nevnap"></p>
                 <script src="assets/js/nevnap.js"></script>
@@ -78,7 +86,7 @@
             </div>
         </div>
     </main>
-    <footer class="container-fuid bg-dark mt-5">
+    <footer class="mt-5 container-fuid bg-dark">
         <div class="container pt-3 text-white">
                     <h5>Elérhetőségek</h5>
                     <hr>

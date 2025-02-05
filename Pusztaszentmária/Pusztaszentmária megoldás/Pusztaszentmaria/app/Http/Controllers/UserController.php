@@ -110,7 +110,7 @@ class UserController extends Controller
 
         if(Hash::check($req -> old_password, $user -> password)){
             $user -> password = Hash::make($req -> password);
-            $user -> save();
+            $user -> Save();
 
             return redirect('/profil')->with('success', 'Sikeres jelszóváltoztatás!');
         } else {

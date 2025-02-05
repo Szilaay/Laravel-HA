@@ -4,7 +4,6 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\GuestbookController;
 
 use App\Http\Controllers\UserController;
-use App\Models\Guestbook;
 use Illuminate\Support\Facades\Route;
 
 #Főoldal

@@ -10,7 +10,7 @@ class GuestbookController extends Controller
 {
     public function getGuestbook()
     {
-        $guestbook = Guestbook::orderBy('date', 'desc')->get();
+        $guestbook = Guestbook::orderBy('vendegkonyv_id', 'desc')->get();
 
         return view('guestbook', ['guestbook' => $guestbook]);
     }

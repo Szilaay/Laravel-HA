@@ -108,13 +108,17 @@ class UserController extends Controller
 
         $user = Auth::user();
 
-        if(Hash::check($req -> old_password, $user -> password)){
-            $user -> password = Hash::make($req -> password);
-            $user -> Save();
-
+        if (Hash::check($req->old_password, $user->password)) {
+            if ($req->old_password === $req->password) {
+                return back()->with('error', 'Az új jelszó nem lehet ugyanaz, mint a régi jelszó!');
+            }
+        
+            $user->password = Hash::make($req->password);
+            $user->save();
+        
             return redirect('/profil')->with('success', 'Sikeres jelszóváltoztatás!');
         } else {
-            return back() -> with('error', 'Hibás régi jelszó!');
+            return back()->with('error', 'Hibás régi jelszó!');
         }
     }
 }

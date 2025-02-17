@@ -1,0 +1,30 @@
+header {
+  background-image: url('../img/header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header h1{
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.solar-system {
+  float: left;
+}
+
+@media screen and (max-width: 576px) {
+  .solar-system {
+    float: none;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    text-align: center;
+  }
+}
+

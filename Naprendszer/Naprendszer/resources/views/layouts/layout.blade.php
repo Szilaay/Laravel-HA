@@ -16,13 +16,13 @@
         <nav class="container navbar navbar-expand bg-dark navbar-dark">    
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Főoldal</a>
+              <a class="nav-link" href="/">Főoldal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Bolygók</a>
+              <a class="nav-link" href="/bolygok">Bolygók</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Holdak</a>
+              <a class="nav-link" href="/holdak">Holdak</a>
             </li>  
           </ul>
         </nav>

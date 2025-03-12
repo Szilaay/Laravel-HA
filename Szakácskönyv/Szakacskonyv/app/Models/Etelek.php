@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Etelek extends Model
 {
     protected $table = 'etelek';
-    protected $PrimaryKey = 'etelid';
+    protected $primaryKey = 'etelid';
 }

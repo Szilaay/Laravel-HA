@@ -25,3 +25,22 @@ nav{
 main{
     min-height: 90vh;
 }
+
+.kereso{
+  margin: auto;
+  width: 75%;
+}
+
+@media only screen and (max-width: 768px){
+  .kereso{
+    width: 100%;
+  }
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-20 {
+  width: 20%;
+}
